@@ -60,7 +60,7 @@ const TodoItem = ({ todo }: { todo: Todo }) => {
             role="img"
             aria-labelledby="save edit"
             style={{ marginLeft: '1rem' }}
-            onClick={() => handleUpdate()}
+            onClick={handleUpdate}
           >
             ✅
           </span>
@@ -89,11 +89,7 @@ const TodoItem = ({ todo }: { todo: Todo }) => {
               </span>
             </>
           )}
-          <input
-            type="checkbox"
-            checked={complete}
-            onChange={() => markComplete()}
-          />
+          <input type="checkbox" checked={complete} onChange={markComplete} />
         </>
       )}
     </div>

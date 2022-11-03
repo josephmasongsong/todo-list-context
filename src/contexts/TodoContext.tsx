@@ -17,9 +17,9 @@ export type Todo = {
   complete: boolean;
 };
 
-interface ChildProps {
+type ChildProps = {
   children?: ReactNode;
-}
+};
 
 export const TodoContext = createContext<{
   state: InitState;
